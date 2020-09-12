@@ -236,18 +236,23 @@ console.log(getArtistByIndex(artists, 0));
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
 
-function get20s(arr) {
-  
-  
-  for(i = 0; i < arr.length; i++) {
-     arr[i].years.split(" - ");{
-      parseInt(arr[i].years)} {
-       if(arr[i].years >= 1900 && arr[i].years <= 2000)
-       art20s.push(arr[i].name)
-}}}
+function get20s(arr){
+   let art20s = []
+ 
+   for(let i = 0; i < arr.length; i++){
+     arr[i].years.split(" - ")
+     parseInt(arr[i].years)
+       if(parseInt(arr[i].years) >= 1900){
+      console.log(arr[i].name)
+         art20s.push(arr[i].name)
+     }
+     }
+        return art20s;
+}
 get20s(artists);
-console.log(art20s)
-;
+
+  
+  
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -283,11 +288,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+let me = {
+  id: 20,
+  name: "Chad",
+  years: "1982 - 2020",
+  genre: "Web Design",
+  nationality: "American",
+  bio: "From a small town in central utah, I grew up loving musing and art.  I also enjoy the outdoors"
+}
 
-    /* Code here */
+function addArtist(arr1, obj){
+   arr1.splice(arr1.length-1, 0, obj)
 
-  }
+return console.log(arr1);
+}
+addArtist(artists, me),
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -298,15 +313,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
-  for(i = 0; i < arr.length; i++){
-    if(arr[i].paintings > 100){
-      return arr[i].name
-    }
-  }
-lotsOfArt(artists);
-
+   let busyArts = []
+ 
+   for(let i = 0; i < arr.length; i++){
+       if(arr[i].paintings > 100){
+      console.log(arr[i].name)
+         busyArts.push(arr[i].name)
+     }
+     }
+        return busyArts;
 }
 
+lotsOfArt(artists);
 
 
 // 🎨🎨 STRETCH 🎨🎨//
